@@ -1,33 +1,40 @@
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (e) => {
-    e.preventDefault();
-    document
-      .querySelector(anchor.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
+// 1. אפקט Sticky Header (התפריט נשאר למעלה ומשנה רקע בגלילה)
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+// 2. תפריט מובייל (המבורגר)
+const menuToggle = document.getElementById("mobile-menu");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+// סגירת התפריט בלחיצה על קישור (כדי שלא יישאר פתוח אחרי מעבר)
+document.querySelectorAll("#nav-menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
   });
 });
 
-// Testimonials slider
-let currentTestimonial = 0;
-const testimonials = document.querySelectorAll(".testimonial");
-function nextTestimonial() {
-  testimonials[currentTestimonial].classList.remove("active");
-  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-  testimonials[currentTestimonial].classList.add("active");
+// 3. אנימציית הופעה בגלילה (Scroll Reveal)
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
 }
-setInterval(nextTestimonial, 5000);
-testimonials[0].classList.add("active");
 
-// Contact form
-document.getElementById("contactForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("הודעה נשלחה! נחזור אלייך  בקרוב. 🙏");
-  e.target.reset();
-});
+window.addEventListener("scroll", reveal);
 
-// Parallax
-window.addEventListener("scroll", () => {
-  document.querySelector(".hero").style.transform =
-    `translateY(${window.pageYOffset * 0.3}px)`;
-});
+// הפעלה ראשונית בטעינת הדף
+reveal();

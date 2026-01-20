@@ -22,7 +22,7 @@ testimonials[0].classList.add("active");
 // Contact form
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  alert("הודעה נשלחה! נחזור אלייך ממש בקרוב. 🙏");
+  alert("הודעה נשלחה! נחזור אלייך  בקרוב. 🙏");
   e.target.reset();
 });
 

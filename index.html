@@ -3,166 +3,208 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>מורן שועפי | מטפלת גוף-נפש וטראומה</title>
+    <title>מורן שועפי | מסע של ריפוי וחיבור</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Frank+Ruhl+Libre:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400&family=Frank+Ruhl+Libre:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="ambient-shape shape-1"></div>
+    <div class="ambient-shape shape-2"></div>
+
     <header id="header">
-      <a href="#" class="logo">מורן<span>שועפי</span></a>
-      <div class="menu-toggle" id="mobile-menu">
-        <i class="fas fa-bars"></i>
+      <a href="#" class="logo">מורן<span>שועפי.</span></a>
+      <div class="menu-toggle" id="mobile-menu-btn">
+        <div class="bar"></div>
+        <div class="bar"></div>
       </div>
       <nav id="nav-menu">
         <ul>
-          <li><a href="#home">ראשי</a></li>
-          <li><a href="#about">אודות</a></li>
-          <li><a href="#methods">גישת הטיפול</a></li>
-          <li><a href="#contact">צור קשר</a></li>
+          <li><a href="#hero">ראשי</a></li>
+          <li><a href="#empathy">הגישה</a></li>
+          <li><a href="#about">אודותיי</a></li>
+          <li><a href="#services">תהליכי ליווי</a></li>
+          <li><a href="#contact" class="nav-btn">תיאום שיחה</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h1>לחזור הביתה, אל הגוף</h1>
-        <p>מרחב בטוח לריפוי טראומה, חיבור גוף-נפש וגילוי כוחות פנימיים.</p>
-        <a href="#contact" class="btn">תיאום פגישת היכרות</a>
+    <section id="hero" class="hero-section">
+      <div class="hero-content reveal-slow">
+        <h1>להשיב את <span class="highlight-text">השקט הפנימי.</span></h1>
+        <p class="subtitle">
+          מרחב בטוח לריפוי טראומה, ויסות מערכת העצבים וגילוי העוצמות שבחיבור
+          גוף-נפש.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">מתחילים מסע משותף</a>
+          <a href="#empathy" class="btn btn-link"
+            >גלי עוד <i class="fas fa-arrow-down"></i
+          ></a>
+        </div>
       </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="about-img reveal">
+      <div class="hero-image-wrapper reveal-slow delay-2">
         <img
-          src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-          alt="מורן שועפי מטפלת"
+          src="https://images.unsplash.com/photo-1604881991720-f96656d39502?q=80&w=1974&auto=format&fit=crop"
+          alt="רוגע וחיבור"
         />
       </div>
-      <div class="about-text reveal">
-        <div
-          class="section-title"
-          style="text-align: right; margin-bottom: 20px"
-        >
-          <span>נעים להכיר</span>
-          <h2>מורן שועפי</h2>
-        </div>
-        <p>
-          אני מאמינה שבתוך כל כאב מסתתר שער לריפוי. כמטפלת גוף-נפש המתמחה בעבודה
-          עם טראומה, אני מזמינה אותך למסע משותף של הקשבה עמוקה.
-        </p>
-        <p>
-          בקליניקה שלי, אנחנו לא רק "מדברים על זה". אנחנו נותנים מקום לחוכמת
-          הגוף, לומדים מחדש את שפת התחושות, ומאפשרים למערכת העצבים למצוא את
-          האיזון הטבעי שלה.
-        </p>
-        <p>
-          הגישה שלי משלבת ידע קליני מעמיק יחד עם חמלה ורכות, כדי ליצור עבורך את
-          הקרקע היציבה ביותר לצמיחה.
-        </p>
-        <br />
-        <a href="#methods" class="btn btn-outline">קראי עוד על הגישה שלי</a>
-      </div>
     </section>
 
-    <section class="quote-section">
-      <div class="reveal">
-        <h3>
-          "הגוף זוכר את מה שהנפש מנסה לשכוח, אך הוא גם מחזיק את המפתח לשחרור."
-        </h3>
-      </div>
-    </section>
-
-    <section class="methods" id="methods">
-      <div class="section-title reveal">
-        <span>ארגז הכלים שלי</span>
-        <h2>דרכי הטיפול</h2>
-      </div>
-      <div class="methods-grid">
-        <div class="method-card reveal">
-          <i class="fas fa-seedling method-icon"></i>
-          <h3>Somatic Experiencing (SE)</h3>
-          <p>
-            החוויה הסומטית היא שיטה פורצת דרך לטיפול בטראומה וחרדה. דרך הקשבה
-            עדינה לגוף, אנו משחררים אנרגיה כלואה ומחזירים את תחושת הביטחון
-            והחיוניות.
-          </p>
-        </div>
-        <div class="method-card reveal">
-          <i class="fas fa-heart method-icon"></i>
-          <h3>טיפול רגשי אינטגרטיבי</h3>
-          <p>
-            מפגש המשלב שיח טיפולי עם תשומת לב לגוף. מתאים להתמודדות עם משברי
-            חיים, דיכאון, וקשיים במערכות יחסים, במרחב מכיל ולא שיפוטי.
-          </p>
-        </div>
-        <div class="method-card reveal">
-          <i class="fas fa-users method-icon"></i>
-          <h3>סדנאות ומעגלי נשים</h3>
-          <p>
-            מרחבים קבוצתיים המאפשרים ריפוי דרך השבט הנשי. עבודה עם נשימה, תנועה
-            ושיתוף, המייצרת תחושת שייכות ועוצמה משותפת.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="contact-info reveal">
-        <div class="section-title" style="text-align: right">
-          <span>בואי נדבר</span>
-          <h2>יצירת קשר</h2>
-        </div>
-        <p style="margin-bottom: 30px">
-          הצעד הראשון הוא המשמעותי ביותר. אני מזמינה אותך ליצור קשר, לשאול,
-          להתייעץ או לקבוע פגישה. אני כאן בשבילך.
-        </p>
-
-        <div>
-          <h4><i class="fas fa-map-marker-alt"></i> הקליניקה</h4>
-          <p>רחוב השקט 10, תל אביב (וכן טיפולים באונליין)</p>
-        </div>
-        <div>
-          <h4><i class="fas fa-phone"></i> טלפון</h4>
-          <p>050-1234567</p>
-        </div>
-        <div>
-          <h4><i class="fas fa-envelope"></i> אימייל</h4>
-          <p>contact@moranshoafi.com</p>
-        </div>
-      </div>
-
-      <form
-        class="reveal"
-        onsubmit="
-          event.preventDefault();
-          alert('ההודעה נשלחה בהצלחה (הדגמה)');
+    <section id="empathy" class="empathy-section">
+      <div
+        class="parallax-bg"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2000&auto=format&fit=crop&quot;);
         "
-      >
-        <input type="text" placeholder="שם מלא" required />
-        <input type="email" placeholder="אימייל" required />
-        <input type="tel" placeholder="טלפון" />
-        <textarea placeholder="כיצד אוכל לעזור?"></textarea>
-        <button type="submit" class="btn">שלח הודעה</button>
-      </form>
+      ></div>
+      <div class="content-wrapper overlap-grid">
+        <div class="text-box glass-effect reveal-right">
+          <h2>
+            כשהנפש עמוסה, <br />
+            הגוף מדבר.
+          </h2>
+          <p>
+            טראומה, חרדה או מתח מתמשך אינם רק "מחשבות בראש". הם נרשמים ברקמות
+            הגוף, במערכת העצבים, בנשימה שלנו.
+          </p>
+          <p>
+            אולי את מרגישה שהכל "יותר מידי", שהגוף בסטרס תמידי, או להפך – תחושת
+            ניתוק וקהות חושים.
+          </p>
+          <p>
+            <strong
+              >החדשות הטובות: הגוף יודע לרפא את עצמו, אם רק נקשיב לו בשפה
+              שלו.</strong
+            >
+          </p>
+        </div>
+        <div class="image-box reveal-left">
+          <img
+            src="https://images.unsplash.com/photo-1620121557398-7752fb305037?q=80&w=1974&auto=format&fit=crop"
+            alt="הקשבה לגוף"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section content-wrapper">
+      <div class="about-grid">
+        <div class="about-img-creative reveal-up">
+          <div class="img-frame organic-border">
+            <img
+              src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?q=80&w=1974&auto=format&fit=crop"
+              alt="מורן שועפי"
+            />
+          </div>
+        </div>
+        <div class="about-text reveal-up delay-2">
+          <span class="overline">נעים להכיר, אני מורן</span>
+          <h2>מלווה אותך בחזרה הביתה, אל עצמך.</h2>
+          <p>
+            כמטפלת גוף-נפש המתמחה בטראומה (SE), אני מאמינה שריפוי אמיתי דורש
+            עדינות. בקליניקה שלי, אנחנו לא מאיצים בתהליכים.
+          </p>
+          <p>
+            אנחנו יוצרות יחד מרחב מכיל שמאפשר למערכת העצבים שלך לפרוק מתח ישן,
+            למצוא מחדש את תחושת הביטחון, ולהפוך כאב לכוח חיים.
+          </p>
+          <a href="#contact" class="btn btn-text"
+            >קבעי שיחת היכרות <i class="fas fa-long-arrow-alt-left"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <div class="content-wrapper">
+        <div class="section-header center-text reveal-up">
+          <span class="overline">ארגז הכלים שלי</span>
+          <h2>נתיבים לריפוי</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card glass-effect reveal-up delay-1">
+            <div class="icon-wrapper"><i class="fas fa-spa"></i></div>
+            <h3>Somatic Experiencing (SE)</h3>
+            <p>
+              שיטת הדגל לטיפול בטראומה. דרך הקשבה עדינה לתחושות הגוף, אנו
+              משחררים אנרגיית "הישרדות" כלואה ומחזירים את הגמישות למערכת העצבים.
+            </p>
+          </div>
+          <div class="service-card glass-effect reveal-up delay-2">
+            <div class="icon-wrapper">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3>טיפול רגשי אינטגרטיבי</h3>
+            <p>
+              מרחב המשלב שיח מעמיק, התמקדות (Focusing) וכלים מעולם המיינדפולנס.
+              מתאים להתמודדות עם חרדה, דיכאון ומשברי חיים.
+            </p>
+          </div>
+          <div class="service-card glass-effect reveal-up delay-3">
+            <div class="icon-wrapper"><i class="fas fa-users"></i></div>
+            <h3>סדנאות ומרחבים קבוצתיים</h3>
+            <p>
+              הכוח של השבט. סדנאות נשימה, תנועה ועיבוד רגשי בקבוצה אינטימית,
+              המאפשרות תחושת שייכות וריפוי משותף.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-container glass-effect reveal-up">
+        <div class="contact-text">
+          <h2>הצעד הראשון שלך.</h2>
+          <p>
+            אני יודעת שפנייה לטיפול דורשת אומץ. אני כאן כדי להקשיב, לענות על כל
+            שאלה ולבדוק יחד אם זה המקום הנכון עבורך.
+          </p>
+          <ul class="contact-details">
+            <li>
+              <i class="fas fa-map-marker-alt"></i> תל אביב (וקליניקת אונליין)
+            </li>
+            <li><i class="fas fa-phone-alt"></i> 050-1234567</li>
+            <li><i class="fas fa-envelope"></i> contact@moranshoafi.com</li>
+          </ul>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" required placeholder=" " />
+            <label for="name">שם מלא</label>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" required placeholder=" " />
+            <label for="phone">טלפון</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder=" "></textarea>
+            <label for="message">מה תרצי לשתף? (לא חובה)</label>
+          </div>
+          <button type="submit" class="btn btn-primary block-btn">
+            שלחי הודעה
+          </button>
+        </form>
+      </div>
     </section>
 
     <footer>
-      <p>&copy; 2024 מורן שועפי - מטפלת גוף נפש. כל הזכויות שמורות.</p>
-      <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6">
-        עיצוב ופיתוח: סטודיו בוטיק
-      </p>
+      <div class="content-wrapper footer-content">
+        <div class="footer-logo">מורן<span>שועפי.</span></div>
+        <p>© 2024 כל הזכויות שמורות. נבנה ברגישות ואהבה.</p>
+      </div>
     </footer>
 
     <script src="app.js"></script>

@@ -16,10 +16,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg-main);
@@ -34,11 +36,13 @@ h1 {
   margin-bottom: 20px;
   font-family: var(--font-heading);
 }
+
 h2 {
   font-size: clamp(1.8rem, 5vw, 3rem);
   margin-bottom: 20px;
   font-family: var(--font-heading);
 }
+
 p {
   font-size: 1.1rem;
   color: var(--color-text-light);
@@ -57,6 +61,7 @@ p {
   opacity: 0.3;
   z-index: -1;
 }
+
 .shape-1 {
   top: -10%;
   right: -10%;
@@ -78,6 +83,7 @@ header {
   z-index: 1000;
   transition: 0.3s;
 }
+
 header.scrolled {
   background: rgba(248, 245, 240, 0.95);
   backdrop-filter: blur(10px);
@@ -91,6 +97,7 @@ header.scrolled {
   text-decoration: none;
   color: var(--color-text-dark);
 }
+
 .logo span {
   color: var(--color-accent);
 }
@@ -101,12 +108,14 @@ nav ul {
   gap: 25px;
   align-items: center;
 }
+
 nav a {
   text-decoration: none;
   color: var(--color-text-dark);
   font-weight: 600;
   font-size: 0.95rem;
 }
+
 .nav-btn {
   background: var(--color-accent);
   color: white !important;
@@ -121,6 +130,7 @@ nav a {
   gap: 5px;
   cursor: pointer;
 }
+
 .menu-toggle span {
   width: 25px;
   height: 2px;
@@ -155,15 +165,6 @@ nav a {
   nav a {
     font-size: 1.5rem;
   }
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
 }
 
 /* --- Hero --- */
@@ -173,27 +174,12 @@ nav a {
   align-items: center;
   padding-top: 80px;
 }
+
 .hero-image-wrapper img {
   width: 100%;
   border-radius: 100px 100px 0 0;
   object-fit: cover;
   height: 60vh;
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-  .hero-image-wrapper {
-    margin-top: 40px;
-    width: 100%;
-  }
-  .hero-image-wrapper img {
-    height: 40vh;
-    border-radius: 30px;
-  }
 }
 
 /* --- Grids --- */
@@ -204,17 +190,6 @@ nav a {
   gap: 50px;
   align-items: center;
 }
-@media (max-width: 768px) {
-  .overlap-grid,
-  .about-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 30px;
-  }
-  .text-box {
-    padding: 30px !important;
-  }
-}
 
 .glass-effect {
   background: rgba(255, 255, 255, 0.7);
@@ -222,6 +197,7 @@ nav a {
   border-radius: 15px;
   padding: 40px;
 }
+
 .organic-border img {
   width: 100%;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -235,18 +211,20 @@ nav a {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
+
 .service-card {
   padding: 30px;
   text-align: center;
   transition: 0.3s;
 }
+
 .icon-wrapper {
   font-size: 2rem;
   color: var(--color-accent);
   margin-bottom: 20px;
 }
 
-/* --- Contact המעודכן ללא טופס --- */
+/* --- Contact --- */
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -254,32 +232,11 @@ nav a {
   overflow: hidden;
   align-items: center;
 }
-@media (max-width: 768px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-}
+
 .contact-text {
   background: var(--color-text-dark);
   color: white;
   padding: 60px 40px;
-}
-.contact-text p {
-  color: #ccc;
-  margin-bottom: 20px;
-}
-
-.contact-details {
-  list-style: none;
-}
-.contact-details li {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-}
-.contact-details i {
-  margin-left: 10px;
-  color: var(--color-accent);
 }
 
 .contact-action {
@@ -300,10 +257,12 @@ nav a {
   border: none;
   font-weight: 600;
 }
+
 .btn-primary {
   background: var(--color-text-dark);
   color: white;
 }
+
 .block-btn {
   width: 100%;
   text-align: center;
@@ -346,36 +305,38 @@ nav a {
   }
 }
 
-.whatsapp-float:hover {
-  background-color: #20ba5a;
-  transform: translateY(-5px);
-}
-
-@media (max-width: 768px) {
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    left: 20px;
-    font-size: 25px;
-  }
-}
-
-/* --- Reveal Animation --- */
+/* --- שדרוג אנימציות חשיפה (REVEAL) --- */
 .reveal-up,
 .reveal-right,
 .reveal-left,
 .reveal-slow {
   opacity: 0;
-  transform: translateY(30px);
-  transition: 1s;
+  filter: blur(8px); /* אפקט טשטוש בכניסה */
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); /* תנועה חלקה ויוקרתית */
+  will-change: transform, opacity, filter;
 }
+
+.reveal-up {
+  transform: translateY(40px);
+}
+.reveal-right {
+  transform: translateX(40px);
+}
+.reveal-left {
+  transform: translateX(-40px);
+}
+.reveal-slow {
+  transform: translateY(20px);
+}
+
+/* כשהאלמנט הופך לפעיל */
 .reveal-up.active,
 .reveal-right.active,
 .reveal-left.active,
 .reveal-slow.active {
   opacity: 1;
-  transform: translateY(0);
+  filter: blur(0);
+  transform: translate(0);
 }
 
 footer {

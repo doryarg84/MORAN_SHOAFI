@@ -246,53 +246,50 @@ nav a {
   margin-bottom: 20px;
 }
 
-/* --- Contact --- */
+/* --- Contact המעודכן ללא טופס --- */
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   border-radius: 20px;
   overflow: hidden;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .contact-container {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 }
 .contact-text {
   background: var(--color-text-dark);
   color: white;
-  padding: 40px;
+  padding: 60px 40px;
 }
-.contact-form {
-  padding: 40px;
-  background: white;
-}
-.form-group {
+.contact-text p {
+  color: #ccc;
   margin-bottom: 20px;
-  position: relative;
 }
-.form-group input {
-  width: 100%;
-  padding: 10px 0;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  outline: none;
-  background: transparent;
+
+.contact-details {
+  list-style: none;
 }
-.form-group label {
-  position: absolute;
-  top: 10px;
-  right: 0;
-  color: #999;
-  transition: 0.3s;
-  pointer-events: none;
+.contact-details li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
 }
-.form-group input:focus + label,
-.form-group input:not(:placeholder-shown) + label {
-  top: -15px;
-  font-size: 0.8rem;
+.contact-details i {
+  margin-left: 10px;
   color: var(--color-accent);
 }
+
+.contact-action {
+  padding: 40px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn {
   padding: 12px 30px;
   border-radius: 25px;
@@ -301,6 +298,7 @@ nav a {
   transition: 0.3s;
   cursor: pointer;
   border: none;
+  font-weight: 600;
 }
 .btn-primary {
   background: var(--color-text-dark);
@@ -308,6 +306,59 @@ nav a {
 }
 .block-btn {
   width: 100%;
+  text-align: center;
+}
+
+/* --- כפתור וואטסאפ צף --- */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  left: 30px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: 20px;
+    font-size: 25px;
+  }
 }
 
 /* --- Reveal Animation --- */
